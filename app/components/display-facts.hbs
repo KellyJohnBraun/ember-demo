@@ -1,0 +1,12 @@
+<b>Name:</b> {{@planet.name}}
+<br/>
+<b>Facts:</b> 
+<ul>
+  {{#each @planet.facts as |fact|}}
+    <li>{{fact}}</li>
+  {{/each}}
+</ul>
+<br/>
+<b>Notes:</b> {{yield}}
+<br>
+<LinkTo @route="planets" role="button">Back to Planets</LinkTo>

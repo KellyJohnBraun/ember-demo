@@ -6,4 +6,12 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('planets');
+
+  this.route('planet', function () {
+    this.route('earth');
+    this.route('mars');
+    this.route('venus');
+  });
+});
